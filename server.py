@@ -6,7 +6,7 @@ with open("./private.pem","rb") as f:
     data = f.read()
     server_private_key = rsa.PrivateKey.load_pkcs1(data)
 
-HOST = ''    
+HOST = '25.96.189.204'    
 PORT = 5005  
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # TCP SOCKET
