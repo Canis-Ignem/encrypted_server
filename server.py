@@ -25,6 +25,8 @@ while True:
     orig_mess = rsa.decrypt(decoded_data, server_private_key).decode('utf8')
     out = execute(orig_mess)
     print(out)
+    final_msg = ''
     for mess in out:
-        conn.sendall(mess.encode())
+        final_msg += mess
+    conn.sendall(final_msg.encode())
 conn.close()

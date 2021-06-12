@@ -18,4 +18,6 @@ while True:
     mess = user_input.encode()
     cypher = rsa.encrypt(mess, server_public_key)
     s.sendall(cypher)  
+    out = s.recv(1024)
+    print(out)
     
