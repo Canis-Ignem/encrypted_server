@@ -11,5 +11,3 @@ def execute(cmd):
     except:
         print("Something went wrong")
         
-        
-print(execute("echo hello"))
