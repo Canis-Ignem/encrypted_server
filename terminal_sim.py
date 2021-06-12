@@ -5,8 +5,7 @@ def execute(cmd):
     
     try:
         out = os.system(cmd).readlines()
-        for o in out:
-            print(o)
+        return out
             
     
     except:
