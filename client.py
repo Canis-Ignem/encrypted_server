@@ -6,8 +6,8 @@ with open("./public.pem","rb") as f:
     data = f.read()
     server_public_key = rsa.PublicKey.load_pkcs1(data)
 
-HOST = '192.168.11.128'    
-PORT = 5006  
+HOST = '25.95.91.150'    
+PORT = 5005
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 print('Client connected.')
