@@ -23,8 +23,8 @@ while True:
         break
     decoded_data = data
     orig_mess = rsa.decrypt(decoded_data, server_private_key).decode('utf8')
-    print(orig_mess)
     out = execute(orig_mess)
+    print(out)
     for mess in out:
         conn.sendall(mess.encode())
 conn.close()
