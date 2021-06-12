@@ -19,5 +19,5 @@ while True:
     cypher = rsa.encrypt(mess, server_public_key)
     s.sendall(cypher)  
     out = s.recv(1024)
-    print(Fore.Red+ "System: ", out.decode())
+    print(Fore.RED+ "System: ", Fore.GREEN+ out.decode())
     
